@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <None Include="..\..\NumberBaseBall.uproject" />
+    <Filter Include="Source">
+      <UniqueIdentifier>{F31BBDD1-B3E8-3BCC-9652-680E16935819}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Source\NumberBaseBall.Target.cs">
+      <Filter>Source</Filter>
+    </None>
+    <None Include="..\..\Source\NumberBaseBallEditor.Target.cs">
+      <Filter>Source</Filter>
+    </None>
+    <None Include="..\..\.vsconfig" />
+    <Filter Include="Config">
+      <UniqueIdentifier>{FA535FFB-25E1-3D20-B416-52F9BE21E06E}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Config\DefaultEditor.ini">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="..\..\Config\DefaultEngine.ini">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="..\..\Config\DefaultGame.ini">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="..\..\Config\DefaultInput.ini">
+      <Filter>Config</Filter>
+    </None>
+    <Filter Include="Source\NumberBaseBall">
+      <UniqueIdentifier>{50F4A2FB-7DA7-3239-B008-C14C50DEEDB9}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Source\NumberBaseBall\NumberBaseBall.Build.cs">
+      <Filter>Source\NumberBaseBall</Filter>
+    </None>
+    <ClCompile Include="..\..\Source\NumberBaseBall\NumberBaseBall.cpp">
+      <Filter>Source\NumberBaseBall</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\NumberBaseBall\NumberBaseBall.h">
+      <Filter>Source\NumberBaseBall</Filter>
+    </ClCompile>
+    <Filter Include="Source\NumberBaseBall\Game">
+      <UniqueIdentifier>{902D0D8B-1B20-3CD1-8354-58789ED36BFA}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\NumberBaseBall\Game\NBBGameModeBase.cpp">
+      <Filter>Source\NumberBaseBall\Game</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\NumberBaseBall\Game\NBBGameModeBase.h">
+      <Filter>Source\NumberBaseBall\Game</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\NumberBaseBall\Game\NBBGameStateBase.cpp">
+      <Filter>Source\NumberBaseBall\Game</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\NumberBaseBall\Game\NBBGameStateBase.h">
+      <Filter>Source\NumberBaseBall\Game</Filter>
+    </ClCompile>
+    <Filter Include="Source\NumberBaseBall\Player">
+      <UniqueIdentifier>{B90F5A57-3F22-3765-B3E3-17D0BDAAFF39}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\NumberBaseBall\Player\NBBPlayerController.cpp">
+      <Filter>Source\NumberBaseBall\Player</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\NumberBaseBall\Player\NBBPlayerController.h">
+      <Filter>Source\NumberBaseBall\Player</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\NumberBaseBall\Player\NBBPlayerState.cpp">
+      <Filter>Source\NumberBaseBall\Player</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\NumberBaseBall\Player\NBBPlayerState.h">
+      <Filter>Source\NumberBaseBall\Player</Filter>
+    </ClCompile>
+    <Filter Include="Source\NumberBaseBall\UI">
+      <UniqueIdentifier>{CE066D0C-1770-36D8-8584-E9DF1849954F}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\NumberBaseBall\UI\NBBUserWidget.cpp">
+      <Filter>Source\NumberBaseBall\UI</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\NumberBaseBall\UI\NBBUserWidget.h">
+      <Filter>Source\NumberBaseBall\UI</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>

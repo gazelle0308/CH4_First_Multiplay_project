@@ -1,0 +1,8 @@
+{
+	"SourceFiles": [
+		"C:\\Git\\CH4_First_Multiplay_project\\NumberBaseBall\\Source\\NumberBaseBall\\NumberBaseBall.Build.cs",
+		"C:\\Git\\CH4_First_Multiplay_project\\NumberBaseBall\\Source\\NumberBaseBall.Target.cs",
+		"C:\\Git\\CH4_First_Multiplay_project\\NumberBaseBall\\Source\\NumberBaseBallEditor.Target.cs"
+	],
+	"EngineVersion": "5.5.4"
+}

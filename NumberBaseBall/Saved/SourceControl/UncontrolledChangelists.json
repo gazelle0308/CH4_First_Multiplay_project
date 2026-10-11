@@ -1,0 +1,20 @@
+{
+	"version": 1,
+	"changelists": [
+		{
+			"guid": "00000000000000000000000000000000",
+			"description": "Default Uncontrolled Changelist",
+			"files": [
+				"C:/Git/CH4_First_Multiplay_project/NumberBaseBall/Content/NBB/Maps/NBB_Map.umap",
+				"C:/Git/CH4_First_Multiplay_project/NumberBaseBall/Content/NBB/Maps/NBB_Level.umap",
+				"C:/Git/CH4_First_Multiplay_project/NumberBaseBall/Content/NBB/Blueprints/Player/BP_NBBPlayerController.uasset",
+				"C:/Git/CH4_First_Multiplay_project/NumberBaseBall/Content/NBB/Blueprints/Game/BP_NBBGameModeBase.uasset",
+				"C:/Git/CH4_First_Multiplay_project/NumberBaseBall/Content/NBB/Blueprints/UI/WBP_NBBUserWidget.uasset",
+				"C:/Git/CH4_First_Multiplay_project/NumberBaseBall/Content/NBB/Blueprints/Game/BP_NBBGameStateBase.uasset",
+				"C:/Git/CH4_First_Multiplay_project/NumberBaseBall/Content/NBB/Blueprints/Player/BP_NBBPlayerState.uasset",
+				"C:/Git/CH4_First_Multiplay_project/NumberBaseBall/Content/NBB/Blueprints/UI/WBP_GameResult.uasset",
+				"C:/Git/CH4_First_Multiplay_project/NumberBaseBall/Content/NBB/Blueprints/BP_NBBGameModeBase.uasset"
+			]
+		}
+	]
+}

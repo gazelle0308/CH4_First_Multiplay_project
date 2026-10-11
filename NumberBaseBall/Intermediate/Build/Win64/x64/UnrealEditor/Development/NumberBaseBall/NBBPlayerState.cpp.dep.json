@@ -1,0 +1,19 @@
+{
+    "Version": "1.2",
+    "Data": {
+        "Source": "c:\\git\\ch4_first_multiplay_project\\numberbaseball\\source\\numberbaseball\\player\\nbbplayerstate.cpp",
+        "ProvidedModule": "",
+        "PCH": "c:\\git\\ch4_first_multiplay_project\\numberbaseball\\intermediate\\build\\win64\\x64\\numberbaseballeditor\\development\\unrealed\\sharedpch.unrealed.project.valapi.cpp20.h.pch",
+        "Includes": [
+            "c:\\git\\ch4_first_multiplay_project\\numberbaseball\\intermediate\\build\\win64\\x64\\unrealeditor\\development\\numberbaseball\\definitions.numberbaseball.h",
+            "c:\\git\\ch4_first_multiplay_project\\numberbaseball\\source\\numberbaseball\\player\\nbbplayerstate.h",
+            "c:\\program files\\epic games\\ue_5.5\\engine\\source\\runtime\\engine\\classes\\gameframework\\playerstate.h",
+            "c:\\program files\\epic games\\ue_5.5\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\engine\\uht\\playerstate.generated.h",
+            "c:\\git\\ch4_first_multiplay_project\\numberbaseball\\intermediate\\build\\win64\\unrealeditor\\inc\\numberbaseball\\uht\\nbbplayerstate.generated.h",
+            "c:\\program files\\epic games\\ue_5.5\\engine\\source\\runtime\\engine\\public\\net\\unrealnetwork.h",
+            "c:\\program files\\epic games\\ue_5.5\\engine\\source\\runtime\\net\\core\\public\\net\\core\\propertyconditions\\propertyconditions.h"
+        ],
+        "ImportedModules": [],
+        "ImportedHeaderUnits": []
+    }
+}
