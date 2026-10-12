@@ -11,7 +11,6 @@
 // UHT include
 #include "NBBGameModeBase.generated.h"
 
-
 // Foward Declare
 
 // Controller
@@ -39,6 +38,20 @@ public:
 
 	void IncreaseGuessCount(ANBBPlayerController* InChattingPlayerController);
 
+	void PlayerTurnChange();
+
+	void SetUpTurn(ANBBPlayerController* JoinPlayer);
+
+	bool IsContinuePlayerTurn(ANBBPlayerController* Player);
+
+	void TimeOutTurn();
+
+	void TurnTimerOn();
+
+	void LeftTurnTimer();
+
+	// GameFlow
+
 	void ResetGame();
 
 	void JudgeGame(ANBBPlayerController* InChattingPlayerController, int InStrikeCount);
@@ -49,4 +62,9 @@ protected:
 
 	TArray<TObjectPtr<ANBBPlayerController>> AllPlayerControllers;
 
+	int32 NowTurnIndex = -1;
+
+	FTimerHandle CastTimer;
+
+	FTimerHandle TurnTimer;
 };

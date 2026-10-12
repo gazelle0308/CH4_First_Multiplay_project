@@ -24,7 +24,11 @@
             "c:\\program files\\epic games\\ue_5.5\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\engine\\uht\\gameplaystaticstypes.generated.h",
             "c:\\program files\\epic games\\ue_5.5\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\engine\\uht\\gameplaystatics.generated.h",
             "c:\\git\\ch4_first_multiplay_project\\numberbaseball\\source\\numberbaseball\\player\\nbbplayercontroller.h",
-            "c:\\git\\ch4_first_multiplay_project\\numberbaseball\\intermediate\\build\\win64\\unrealeditor\\inc\\numberbaseball\\uht\\nbbplayercontroller.generated.h"
+            "c:\\git\\ch4_first_multiplay_project\\numberbaseball\\intermediate\\build\\win64\\unrealeditor\\inc\\numberbaseball\\uht\\nbbplayercontroller.generated.h",
+            "c:\\git\\ch4_first_multiplay_project\\numberbaseball\\source\\numberbaseball\\game\\nbbgamemodebase.h",
+            "c:\\git\\ch4_first_multiplay_project\\numberbaseball\\intermediate\\build\\win64\\unrealeditor\\inc\\numberbaseball\\uht\\nbbgamemodebase.generated.h",
+            "c:\\program files\\epic games\\ue_5.5\\engine\\source\\runtime\\engine\\public\\net\\unrealnetwork.h",
+            "c:\\program files\\epic games\\ue_5.5\\engine\\source\\runtime\\net\\core\\public\\net\\core\\propertyconditions\\propertyconditions.h"
         ],
         "ImportedModules": [],
         "ImportedHeaderUnits": []

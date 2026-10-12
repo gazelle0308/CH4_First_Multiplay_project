@@ -14,7 +14,7 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 #endif
 #define NUMBERBASEBALL_NBBPlayerState_generated_h
 
-#define FID_Git_CH4_First_Multiplay_project_NumberBaseBall_Source_NumberBaseBall_Player_NBBPlayerState_h_18_INCLASS_NO_PURE_DECLS \
+#define FID_Git_CH4_First_Multiplay_project_NumberBaseBall_Source_NumberBaseBall_Player_NBBPlayerState_h_21_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesANBBPlayerState(); \
 	friend struct Z_Construct_UClass_ANBBPlayerState_Statics; \
@@ -24,13 +24,15 @@ public: \
 	enum class ENetFields_Private : uint16 \
 	{ \
 		NETFIELD_REP_START=(uint16)((int32)Super::ENetFields_Private::NETFIELD_REP_END + (int32)1), \
-		PlayerNameString=NETFIELD_REP_START, \
+		PlayerTurn=NETFIELD_REP_START, \
+		LeftTurnTime, \
+		PlayerNameString, \
 		CurrentGuessCount, \
 		NETFIELD_REP_END=CurrentGuessCount	}; \
 	NO_API virtual void ValidateGeneratedRepEnums(const TArray<struct FRepRecord>& ClassReps) const override;
 
 
-#define FID_Git_CH4_First_Multiplay_project_NumberBaseBall_Source_NumberBaseBall_Player_NBBPlayerState_h_18_ENHANCED_CONSTRUCTORS \
+#define FID_Git_CH4_First_Multiplay_project_NumberBaseBall_Source_NumberBaseBall_Player_NBBPlayerState_h_21_ENHANCED_CONSTRUCTORS \
 private: \
 	/** Private move- and copy-constructors, should never be used */ \
 	ANBBPlayerState(ANBBPlayerState&&); \
@@ -42,12 +44,12 @@ public: \
 	NO_API virtual ~ANBBPlayerState();
 
 
-#define FID_Git_CH4_First_Multiplay_project_NumberBaseBall_Source_NumberBaseBall_Player_NBBPlayerState_h_15_PROLOG
-#define FID_Git_CH4_First_Multiplay_project_NumberBaseBall_Source_NumberBaseBall_Player_NBBPlayerState_h_18_GENERATED_BODY \
+#define FID_Git_CH4_First_Multiplay_project_NumberBaseBall_Source_NumberBaseBall_Player_NBBPlayerState_h_18_PROLOG
+#define FID_Git_CH4_First_Multiplay_project_NumberBaseBall_Source_NumberBaseBall_Player_NBBPlayerState_h_21_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	FID_Git_CH4_First_Multiplay_project_NumberBaseBall_Source_NumberBaseBall_Player_NBBPlayerState_h_18_INCLASS_NO_PURE_DECLS \
-	FID_Git_CH4_First_Multiplay_project_NumberBaseBall_Source_NumberBaseBall_Player_NBBPlayerState_h_18_ENHANCED_CONSTRUCTORS \
+	FID_Git_CH4_First_Multiplay_project_NumberBaseBall_Source_NumberBaseBall_Player_NBBPlayerState_h_21_INCLASS_NO_PURE_DECLS \
+	FID_Git_CH4_First_Multiplay_project_NumberBaseBall_Source_NumberBaseBall_Player_NBBPlayerState_h_21_ENHANCED_CONSTRUCTORS \
 private: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 

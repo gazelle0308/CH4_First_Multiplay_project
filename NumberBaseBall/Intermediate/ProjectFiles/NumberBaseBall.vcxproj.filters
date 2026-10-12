@@ -79,4 +79,14 @@
       <Filter>Source\NumberBaseBall\UI</Filter>
     </ClCompile>
   </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Source\NumberBaseBall\Enums">
+      <UniqueIdentifier>{2f90d423-f473-4635-a70c-8b485e3535d2}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\Source\NumberBaseBall\Enums\State.h">
+      <Filter>Source\NumberBaseBall\Enums</Filter>
+    </ClInclude>
+  </ItemGroup>
 </Project>

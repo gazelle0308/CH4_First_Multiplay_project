@@ -19,6 +19,7 @@ class NUMBERBASEBALL_API ANBBGameStateBase : public AGameStateBase
 
 	// Methods
 public:
+
 	UFUNCTION(NetMulticast, Reliable)
 	void MulticastRPCBroadcastLoginMessage(const FString& InNameString = FString(TEXT("XXXXXXX")));
 

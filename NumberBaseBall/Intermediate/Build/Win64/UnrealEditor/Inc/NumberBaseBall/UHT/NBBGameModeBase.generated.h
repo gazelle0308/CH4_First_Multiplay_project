@@ -14,7 +14,7 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 #endif
 #define NUMBERBASEBALL_NBBGameModeBase_generated_h
 
-#define FID_Git_CH4_First_Multiplay_project_NumberBaseBall_Source_NumberBaseBall_Game_NBBGameModeBase_h_24_INCLASS_NO_PURE_DECLS \
+#define FID_Git_CH4_First_Multiplay_project_NumberBaseBall_Source_NumberBaseBall_Game_NBBGameModeBase_h_23_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesANBBGameModeBase(); \
 	friend struct Z_Construct_UClass_ANBBGameModeBase_Statics; \
@@ -23,7 +23,7 @@ public: \
 	DECLARE_SERIALIZER(ANBBGameModeBase)
 
 
-#define FID_Git_CH4_First_Multiplay_project_NumberBaseBall_Source_NumberBaseBall_Game_NBBGameModeBase_h_24_ENHANCED_CONSTRUCTORS \
+#define FID_Git_CH4_First_Multiplay_project_NumberBaseBall_Source_NumberBaseBall_Game_NBBGameModeBase_h_23_ENHANCED_CONSTRUCTORS \
 	/** Standard constructor, called after all reflected properties have been initialized */ \
 	NO_API ANBBGameModeBase(const FObjectInitializer& ObjectInitializer = FObjectInitializer::Get()); \
 private: \
@@ -37,12 +37,12 @@ public: \
 	NO_API virtual ~ANBBGameModeBase();
 
 
-#define FID_Git_CH4_First_Multiplay_project_NumberBaseBall_Source_NumberBaseBall_Game_NBBGameModeBase_h_21_PROLOG
-#define FID_Git_CH4_First_Multiplay_project_NumberBaseBall_Source_NumberBaseBall_Game_NBBGameModeBase_h_24_GENERATED_BODY \
+#define FID_Git_CH4_First_Multiplay_project_NumberBaseBall_Source_NumberBaseBall_Game_NBBGameModeBase_h_20_PROLOG
+#define FID_Git_CH4_First_Multiplay_project_NumberBaseBall_Source_NumberBaseBall_Game_NBBGameModeBase_h_23_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	FID_Git_CH4_First_Multiplay_project_NumberBaseBall_Source_NumberBaseBall_Game_NBBGameModeBase_h_24_INCLASS_NO_PURE_DECLS \
-	FID_Git_CH4_First_Multiplay_project_NumberBaseBall_Source_NumberBaseBall_Game_NBBGameModeBase_h_24_ENHANCED_CONSTRUCTORS \
+	FID_Git_CH4_First_Multiplay_project_NumberBaseBall_Source_NumberBaseBall_Game_NBBGameModeBase_h_23_INCLASS_NO_PURE_DECLS \
+	FID_Git_CH4_First_Multiplay_project_NumberBaseBall_Source_NumberBaseBall_Game_NBBGameModeBase_h_23_ENHANCED_CONSTRUCTORS \
 private: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 

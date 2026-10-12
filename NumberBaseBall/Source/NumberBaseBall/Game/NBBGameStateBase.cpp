@@ -9,6 +9,12 @@
 // Controller include
 #include "Player/NBBPlayerController.h"
 
+// GameMode include
+#include "Game/NBBGameModeBase.h"
+
+// Network include
+#include "Net/UnrealNetwork.h"
+
 void ANBBGameStateBase::MulticastRPCBroadcastLoginMessage_Implementation(const FString& InNameString)
 {
 	if (HasAuthority() == false)

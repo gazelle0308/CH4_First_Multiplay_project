@@ -29,7 +29,6 @@ public:
 
 	virtual void GetLifetimeReplicatedProps(TArray<class FLifetimeProperty>& OutLifetimeProps) const override;
 
-
 	void SetChatMessageString(const FString& InputFString);
 
 	void PrintChatMessageString(const FString& InputFString);

@@ -8,6 +8,9 @@
 // Base include
 #include "GameFramework/PlayerState.h"
 
+// State include
+#include "Enums/State.h"
+
 // UHT include
 #include "NBBPlayerState.generated.h"
 
@@ -27,11 +30,18 @@ public:
 
 	// Properties
 public:
+	UPROPERTY(Replicated, BlueprintReadOnly)
+	ETurnState PlayerTurn;
+
+	UPROPERTY(Replicated, BlueprintReadOnly)
+	float LeftTurnTime = -1.0f;
+
 	UPROPERTY(Replicated)
 	FString PlayerNameString;
 
 	UPROPERTY(Replicated)
 	int32 CurrentGuessCount;
+
 
 	int32 MaxGuessCount;
 };

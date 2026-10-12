@@ -20,6 +20,12 @@ void ANBBGameModeBase::OnPostLogin(AController* NewPlayer)
 {
 	Super::OnPostLogin(NewPlayer);
 
+	if (NowTurnIndex == -1)
+	{
+		NowTurnIndex = 0;
+		TurnTimerOn();
+	}
+
 	ANBBPlayerController* NBBPlayerController = Cast<ANBBPlayerController>(NewPlayer);
 	if (IsValid(NBBPlayerController) == true)
 	{
@@ -37,6 +43,9 @@ void ANBBGameModeBase::OnPostLogin(AController* NewPlayer)
 		{
 			NBBGameStateBase->MulticastRPCBroadcastLoginMessage(NBBPS->PlayerNameString);
 		}
+
+		SetUpTurn(NBBPlayerController);
+
 	}
 }
 
@@ -130,7 +139,11 @@ void ANBBGameModeBase::BeginPlay()
 {
 	Super::BeginPlay();
 	SecretNumberString = GenerateSecretNumber();
-
+	GetWorld()->GetTimerManager().SetTimer(CastTimer,
+		this,
+		&ANBBGameModeBase::LeftTurnTimer,
+		0.1f,
+		true);
 	UE_LOG(LogTemp, Error, TEXT("%s"), *SecretNumberString);
 }
 
@@ -139,6 +152,19 @@ void ANBBGameModeBase::PrintChatMessageString(ANBBPlayerController* InChattingPl
 	FString ChatMessageString = InChatMessageString;
 	int Index = InChatMessageString.Len() - 3;
 	FString GuessNumberString = InChatMessageString.RightChop(Index);
+
+	if (NowTurnIndex == -1 ||
+		InChattingPlayerController != AllPlayerControllers[NowTurnIndex])
+	{
+		InChattingPlayerController->ClientRPCPrintChatMessageString(FString("Not Your Turn. Please left again."));
+		return;
+	}
+
+	if (!IsContinuePlayerTurn(InChattingPlayerController))
+	{
+		InChattingPlayerController->ClientRPCPrintChatMessageString(FString("End your Try. Please left again."));
+		return;
+	}
 
 	if (IsGuessNumberString(GuessNumberString) == true)
 	{
@@ -156,8 +182,11 @@ void ANBBGameModeBase::PrintChatMessageString(ANBBPlayerController* InChattingPl
 
 				int32 StrikeCount = FCString::Atoi(*JudgeResultString.Left(1));
 				JudgeGame(InChattingPlayerController, StrikeCount);
+
 			}
 		}
+		PlayerTurnChange();
+		TurnTimerOn();
 	}
 	else
 	{
@@ -171,6 +200,103 @@ void ANBBGameModeBase::IncreaseGuessCount(ANBBPlayerController* InChattingPlayer
 	if (IsValid(NBBPS) == true)
 	{
 		NBBPS->CurrentGuessCount++;
+	}
+}
+
+void ANBBGameModeBase::PlayerTurnChange()
+{
+	ANBBPlayerState* NBBPS;
+
+	if (NowTurnIndex != -1 &&
+		NowTurnIndex < AllPlayerControllers.Num())
+	{
+		NBBPS = AllPlayerControllers[NowTurnIndex]->GetPlayerState<ANBBPlayerState>();
+		if (IsValid(NBBPS) == true)
+		{
+			NBBPS->PlayerTurn = ETurnState::WaitTurn;
+		}
+
+		NowTurnIndex = NowTurnIndex + 1;
+
+		if (NowTurnIndex >= AllPlayerControllers.Num())
+		{
+			NowTurnIndex = 0;
+		}
+	}
+
+	NBBPS = AllPlayerControllers[NowTurnIndex]->GetPlayerState<ANBBPlayerState>();
+	if (IsValid(NBBPS) == true)
+	{
+		NBBPS->PlayerTurn = ETurnState::NowTurn;
+	}
+}
+
+void ANBBGameModeBase::SetUpTurn(ANBBPlayerController* JoinPlayer)
+{
+
+	ANBBPlayerState* NBBPS;
+
+	if (NowTurnIndex != -1 &&
+		NowTurnIndex < AllPlayerControllers.Num())
+	{
+		if (AllPlayerControllers[NowTurnIndex] == JoinPlayer)
+		{
+			NBBPS = JoinPlayer->GetPlayerState<ANBBPlayerState>();
+			if (IsValid(NBBPS) == true)
+			{
+				NBBPS->PlayerTurn = ETurnState::NowTurn;
+			}
+		}
+		else
+		{
+			NBBPS = JoinPlayer->GetPlayerState<ANBBPlayerState>();
+			if (IsValid(NBBPS) == true)
+			{
+				NBBPS->PlayerTurn = ETurnState::WaitTurn;
+			}
+		}
+	}
+}
+
+bool ANBBGameModeBase::IsContinuePlayerTurn(ANBBPlayerController* Player)
+{
+	ANBBPlayerState* NBBPS = Player->GetPlayerState<ANBBPlayerState>();
+
+	if (IsValid(NBBPS) == true)
+	{
+		return NBBPS->CurrentGuessCount < NBBPS->MaxGuessCount;
+	}
+
+	return false;
+}
+
+void ANBBGameModeBase::TimeOutTurn()
+{
+	IncreaseGuessCount(AllPlayerControllers[NowTurnIndex]);
+	PlayerTurnChange();
+	TurnTimerOn();
+}
+
+void ANBBGameModeBase::TurnTimerOn()
+{
+	GetWorld()->GetTimerManager().SetTimer(TurnTimer,
+		this,
+		&ANBBGameModeBase::TimeOutTurn,
+		30.0f,
+		false);
+}
+
+void ANBBGameModeBase::LeftTurnTimer()
+{
+	float LeftTime = GetWorld()->GetTimerManager().GetTimerRemaining(TurnTimer);
+
+	for (const auto& NBBPlayerController : AllPlayerControllers)
+	{
+		ANBBPlayerState* NBBPS = NBBPlayerController->GetPlayerState<ANBBPlayerState>();
+		if (IsValid(NBBPS) == true)
+		{
+			NBBPS->LeftTurnTime = LeftTime;
+		}
 	}
 }
 
